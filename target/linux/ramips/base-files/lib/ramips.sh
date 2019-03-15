@@ -244,6 +244,9 @@ ramips_board_detect() {
 	*"HW550-3G")
 		name="hw550-3g"
 		;;
+	*"i.onik Wi-Fi Cloud Hub")
+		name="ionik-cloud-hub"
+		;;
 	*"IP2202")
 		name="ip2202"
 		;;

@@ -789,6 +789,18 @@ define Device/wizard8800
 endef
 TARGET_DEVICES += wizard8800
 
+define Device/ionik-cloud-hub
+  DTS := IONIKCLOUDHUB
+  UIMAGE_NAME:= Linux Kernel Image
+  DEVICE_TITLE := IONIK CLOUD HUB
+  #IMAGE_SIZE := 5500k
+  IMAGE_SIZE := $(ralink_default_fw_size_8M)
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-net kmod-usb-storage kmod-usb-storage-extras usbutils \
+		  kmod-scsi-core kmod-scsi-generic kmod-fs-ext4 kmod-fs-msdos block-mount \
+          kmod-ledtrig-netdev kmod-ledtrig-timer kmod-leds-gpio
+endef
+TARGET_DEVICES += ionik-cloud-hub
+
 define Device/wizfi630a
   DTS := WIZFI630A
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
